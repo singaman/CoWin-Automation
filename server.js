@@ -3,6 +3,7 @@ const path = require("path");
 const cp = require("child_process");
 const nodemailer = require("nodemailer");
 const app = express()
+const port = process.env.PORT || 3000
 
 app.get('/', function (req, res) {
   let pathOfIndexFile = path.join(__dirname,'index.html');
@@ -43,5 +44,5 @@ app.get("/details/:pin/:age/:email",async function(req,res){
       console.log("Message sent: %s", info.messageId);
 })
 
-app.listen(3000)
+app.listen($port)
 console.log("server is running");
