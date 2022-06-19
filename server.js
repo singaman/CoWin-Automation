@@ -1,9 +1,10 @@
+const nodemon = require('nodemon');
 const express = require('express')
 const path = require("path");
 const cp = require("child_process");
 const nodemailer = require("nodemailer");
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5000
 
 app.get('/', function (req, res) {
   let pathOfIndexFile = path.join(__dirname,'index.html');
@@ -43,6 +44,12 @@ app.get("/details/:pin/:age/:email",async function(req,res){
     
       console.log("Message sent: %s", info.messageId);
 })
+//
+nodemon({ script: 'server.js' }).on('start', function () {
+  console.log('nodemon started');
+}).on('crash', function () {
+  console.log('script crashed for some reason');
+});
 
 app.listen(PORT)
 console.log("server is running");
