@@ -17,6 +17,7 @@
     "puppeteer": "^14.1.2"
   },
   "devDependencies": {
+    "node": "12.22.9",
     "nodemon": "^1.18.4"
   }
 }
