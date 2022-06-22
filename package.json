@@ -2,8 +2,8 @@
   "name": "module4",
   "version": "1.0.0",
   "description": "",
-  "main": "input.js",  
-   "engines": {
+  "main": "index.html",
+  "engines": {
     "node": "12.22.9",
     "npm": "8.5.1"
   },
@@ -14,12 +14,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node": "^12.22.9",
     "axios": "^0.27.2",
     "express": "^4.18.1",
     "json-as-xlsx": "^2.4.2",
+    "node": "^12.22.9",
     "nodemailer": "^6.7.5",
-    "puppeteer": "^14.1.2",
-    "nodemon": "^1.18.4"
+    "puppeteer": "^14.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }

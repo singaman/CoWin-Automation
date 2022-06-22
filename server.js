@@ -44,12 +44,12 @@ app.get("/details/:pin/:age/:email",async function(req,res){
     
       console.log("Message sent: %s", info.messageId);
 })
-//
+/*
 nodemon({ script: 'server.js' }).on('start', function () {
   console.log('nodemon started');
 }).on('crash', function () {
   console.log('script crashed for some reason');
 });
-
+*/
 app.listen(PORT)
 console.log("server is running");
